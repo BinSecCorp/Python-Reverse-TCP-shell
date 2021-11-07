@@ -1,4 +1,4 @@
-# Python-Reverse-TCP-shell #
+#Dynamic-Buffer Python-Reverse-TCP-shell #
 ## Overview ##
 This is a simple tool for remote command execution. The client connects to the host server, the server can send commands to execute to the client.
 
@@ -16,10 +16,6 @@ then it will send the result.
 3. execution of applications
 4. netsh
 5. etc
-
-**Current unworking commands**
-1. cd
-2. actions that require more than one command in a single cmd/terminal session
 
 *for unix systems, if the command requires a sudo, type in:*
 
