@@ -27,4 +27,4 @@ In order to disconnect from the client properly, the server shell must send a di
             close connection
 
 in the shell. This will reactivate the search mode in the client shell and automatically quit the server program.
-The client program will not quit unless the host machine has been shutoff or it was manually killed. In order to have the program run indefinitly, use pyinstaller to "compile" the script into an executable for the target OS. Then move the executable to the startup programs for the script to execute everytime the target machine was turned on. 
+The client program will not quit unless the host machine has been shutoff or it was manually killed. In order to have the program run indefinitly, use pyinstaller to "compile" the script into an executable for the target OS. Then move the executable to the startup programs for the script to execute everytime the target machine was turned on. This can be done via commandline.
