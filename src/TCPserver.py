@@ -34,6 +34,6 @@ while True:
 
         CLIENT_SOCKET.send(bytes(CMD_INPUT, 'utf-8'))
 
-        BUFFER_SIZE = CLIENT_SOCKET.recv(1068).decode('utf-8')      #recieves buffersize before actual reply
+        BUFFER_SIZE = int(CLIENT_SOCKET.recv(1068).decode('utf-8'))      #recieves buffersize before actual reply
         REPLY = CLIENT_SOCKET.recv(BUFFER_SIZE).decode('utf-8')
         print(f'[*]Recieved:\n{REPLY}')
