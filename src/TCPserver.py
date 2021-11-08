@@ -28,6 +28,17 @@ while True:
         CLIENT_SOCKET.send(bytes('CLOSE_CONNECTION','utf-8'))
         
         break
+    
+    elif CMD_INPUT[0:4] == "sudo":          #handles commands requiring sudo
+
+        PW = input("password: ")
+        print(f'[*]Sending command: {CMD_INPUT}')
+
+        CLIENT_SOCKET.send(bytes(f"echo {PW} | sudo -s {CMD_INPUT[5:]}", 'utf-8'))
+
+        BUFFER_SIZE = int(CLIENT_SOCKET.recv(1068).decode('utf-8'))    #recieves buffersize before actual reply
+        REPLY = CLIENT_SOCKET.recv(BUFFER_SIZE).decode('utf-8')
+        print(f'[*]Recieved:\n{REPLY}')
 
     else:
         print(f'[*]Sending command: {CMD_INPUT}')
